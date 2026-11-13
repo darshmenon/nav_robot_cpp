@@ -1,0 +1,19 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build-test:
+    runs-on: ubuntu-22.04
+    container: ros:humble
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends ros-humble-nav2-core ros-humble-nav2-util ros-humble-nav2-costmap-2d \
+            ros-humble-nav2-behavior-tree ros-humble-nav2-waypoint-follower ros-humble-behaviortree-cpp-v3 \
+            ros-humble-tf2-geometry-msgs ros-humble-pluginlib ros-humble-ament-cmake-gtest
+      - name: Build and test
+        run: |
+          . /opt/ros/humble/setup.sh
+          mkdir -p /ws/src && cp -r . /ws/src/nav_robot_cpp
+          cd /ws && colcon build --event-handlers console_direct+ && colcon test && colcon test-result --verbose
