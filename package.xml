@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>nav_robot_cpp</name>
+  <version>0.1.0</version>
+  <description>C++ Nav2 plugins and nodes for nav_robot: scan watchdog, scan-health BT condition, waypoint task executor, straight-line planner, pure-pursuit controller</description>
+  <maintainer email="darshmenon02@gmail.com">darshmenon</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>pluginlib</depend>
+  <depend>nav2_core</depend>
+  <depend>nav2_util</depend>
+  <depend>nav2_costmap_2d</depend>
+  <depend>nav2_behavior_tree</depend>
+  <depend>behaviortree_cpp_v3</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <test_depend>ament_cmake_gtest</test_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

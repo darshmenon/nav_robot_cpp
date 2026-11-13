@@ -1,0 +1,5 @@
+<library path="nav_robot_plugins">
+  <class name="nav_robot_cpp/LogWaypointTask" type="nav_robot_cpp::LogWaypointTask" base_class_type="nav2_core::WaypointTaskExecutor">
+    <description>Logs and pauses at each waypoint</description>
+  </class>
+</library>

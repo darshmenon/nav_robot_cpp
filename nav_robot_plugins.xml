@@ -1,0 +1,8 @@
+<library path="nav_robot_plugins">
+  <class name="nav_robot_cpp/StraightLinePlanner" type="nav_robot_cpp::StraightLinePlanner" base_class_type="nav2_core::GlobalPlanner">
+    <description>Straight line from start to goal, rejected when it crosses an occupied cell</description>
+  </class>
+  <class name="nav_robot_cpp/PurePursuitController" type="nav_robot_cpp::PurePursuitController" base_class_type="nav2_core::Controller">
+    <description>Minimal pure-pursuit controller for a differential-drive robot</description>
+  </class>
+</library>
